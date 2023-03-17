@@ -27,6 +27,8 @@ const Home = () => {
 			  })}, [])
 
 			  useEffect(()=> {
+				if(todos && todos > 1){
+
 				fetch(url, {
 				 method: 'PUT',
 				 body: JSON.stringify(todos),
@@ -45,6 +47,8 @@ const Home = () => {
 				 .catch(error => {
 				  console.log(error)
 			  })
+				}
+
 			  }, [todos])
 		
 			
